@@ -1,0 +1,121 @@
+﻿<h2>Тереторіальний виборчий округ № @Model.NumOkrug</h2>
+
+<hr>
+
+<div class="cont">
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th class="text-center align-middle">№ ВД</th>
+            <th class="text-center align-middle">К-сть одержаних бюлетенів</th>
+            <th class="text-center align-middle">К-сть виборців, внесених до списку</th>
+            <th class="text-center align-middle">К-сть виборців, внесених до витягу для голос. за місцем перебув.</th>
+            <th class="text-center align-middle">К-сть невикор. бюлетенів</th>
+            <th class="text-center align-middle">К-сть виборців, які отримали бюлетені у приміщ.</th>
+            <th class="text-center align-middle">К-сть виборців, які отримали бюлетені за місцем перебув.</th>
+            <th class="text-center align-middle">Загальна к-сть виборців, які отримали бюлетені</th>
+            <th class="text-center align-middle">К-сть бюлетенів, що не підлягають врахуванню</th>
+            <th class="text-center align-middle">К-сть виборців, які взяли участь у голосуванні</th>
+            <th class="text-center align-middle">К-сть бюлетенів, визнаних недійсними</th>
+            <th class="text-center align-middle">Балашов Геннадій</th>
+            <th class="text-center align-middle">Безсмертний Роман</th>
+            <th class="text-center align-middle">Богомолець Ольга</th>
+            <th class="text-center align-middle">Богословська Інна</th>
+            <th class="text-center align-middle">Бойко Юрій</th>
+            <th class="text-center align-middle">Бондар Віктор</th>
+            <th class="text-center align-middle">Ващенко Олександр</th>
+            <th class="text-center align-middle">Вілкул Олександр</th>
+            <th class="text-center align-middle">Габер Микола</th>
+            <th class="text-center align-middle">Гриценко Анатолій</th>
+            <th class="text-center align-middle">Данилюк Олександр</th>
+            <th class="text-center align-middle">Дерев'янко Юрій</th>
+            <th class="text-center align-middle">Журавльов Василь</th>
+            <th class="text-center align-middle">Зеленський Володимир</th>
+            <th class="text-center align-middle">Каплін Сергій</th>
+            <th class="text-center align-middle">Кармазін Юрій</th>
+            <th class="text-center align-middle">Кива Ілля</th>
+            <th class="text-center align-middle">Корнацький Аркадій</th>
+            <th class="text-center align-middle">Кошулинський Руслан</th>
+            <th class="text-center align-middle">Кривенко Віктор</th>
+            <th class="text-center align-middle">Купрій Віталій</th>
+            <th class="text-center align-middle">Литвиненко Юлія</th>
+            <th class="text-center align-middle">Ляшко Олег</th>
+            <th class="text-center align-middle">Мороз Олександр</th>
+            <th class="text-center align-middle">Наливайченко Валентин</th>
+            <th class="text-center align-middle">Насіров Роман</th>
+            <th class="text-center align-middle">Новак Андрій</th>
+            <th class="text-center align-middle">Носенко Сергій</th>
+            <th class="text-center align-middle">Петров Володимир</th>
+            <th class="text-center align-middle">Порошенко Петро</th>
+            <th class="text-center align-middle">Ригованов Руслан</th>
+            <th class="text-center align-middle">Скоцик Віталій</th>
+            <th class="text-center align-middle">Смешко Ігор</th>
+            <th class="text-center align-middle">Соловйов Олександр</th>
+            <th class="text-center align-middle">Тарута Сергій</th>
+            <th class="text-center align-middle">Тимошенко Юлія</th>
+            <th class="text-center align-middle">Тимошенко Юрій</th>
+            <th class="text-center align-middle">Шевченко Ігор</th>
+            <th class="text-center align-middle">Шевченко Олександр</th>
+            <th class="text-center align-middle">Дата та час протоколу</th>
+        </tr>
+    </thead>
+    <tbody class="">
+        @foreach (var department in Model.departments)
+        {
+        <tr>
+            <th class="text-center">@department.Id</th>
+            <td class="text-center">@department.TotalRecievedBul</td>
+            <td class="text-center">@department.NumberOfVotersIncluded</td>
+            <td class="text-center">@department.NumberOfVotersIncludedPlace</td>
+            <td class="text-center">@department.NumberOfUnusedBul</td>
+            <td class="text-center">@department.NumberOfVotersRecievedIndoors</td>
+            <td class="text-center">@department.NumberOfVotersRecievedAtPlace</td>
+            <td class="text-center">@department.TotalNumberVoters</td>
+            <td class="text-center">@department.NumberOfBulNotConsider</td>
+            <td class="text-center">@department.TotalNumberVotersVoting</td>
+            <td class="text-center">@department.NumberOfBulInvalid</td>
+            <td class="text-center">@department.BalshowGenadiy</td>
+            <td class="text-center">@department.BezsmertniyRoman</td>
+            <td class="text-center">@department.BogomoletzOlga</td>
+            <td class="text-center">@department.BogoslovskaInna</td>
+            <td class="text-center">@department.BoykoYrii</td>
+            <td class="text-center">@department.BondarViktor</td>
+            <td class="text-center">@department.VaschenkoOleksandr</td>
+            <td class="text-center">@department.VilkulOleksandr</td>
+            <td class="text-center">@department.GaberMykola</td>
+            <td class="text-center">@department.GrytsenkoAnatoliy</td>
+            <td class="text-center">@department.DanulyukOleksandr</td>
+            <td class="text-center">@department.DerevyankoYrii</td>
+            <td class="text-center">@department.ZhuravlyovVasyl</td>
+            <td class="text-center">@department.ZelenskiyVolodymr</td>
+            <td class="text-center">@department.KaplinSergiy</td>
+            <td class="text-center">@department.KarmazinYrii</td>
+            <td class="text-center">@department.KyvaIlya</td>
+            <td class="text-center">@department.CornatskiyArkadiy</td>
+            <td class="text-center">@department.KoshylunskiyRuslan</td>
+            <td class="text-center">@department.KruvenkoViktor</td>
+            <td class="text-center">@department.KupriyVitaliy</td>
+            <td class="text-center">@department.LytvynenkoYlia</td>
+            <td class="text-center">@department.LyashkoOleg</td>
+            <td class="text-center">@department.MorozOleksandr</td>
+            <td class="text-center">@department.NaluvaichenkoValentin</td>
+            <td class="text-center">@department.NasirovRoman</td>
+            <td class="text-center">@department.NovakAndriy</td>
+            <td class="text-center">@department.NosenkoSergiy</td>
+            <td class="text-center">@department.PetrovVolodymyr</td>
+            <td class="text-center">@department.PoroshenkoPetro</td>
+            <td class="text-center">@department.RigovanowRuslan</td>
+            <td class="text-center">@department.SkotsukVitaliy</td>
+            <td class="text-center">@department.SmeshkoIgor</td>
+            <td class="text-center">@department.SolovyowOleksandr</td>
+            <td class="text-center">@department.TarutaSergiy</td>
+            <td class="text-center">@department.TymoshenkoYulia</td>
+            <td class="text-center">@department.TymoshenkoYurii</td>
+            <td class="text-center">@department.ShewchenkoIgor</td>
+            <td class="text-center">@department.ShewchenkoOleksandr</td>
+            <td class="text-center">@department.Date</td>
+        </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,33 @@
+﻿
+<h2>Статистика</h2>
+<hr>
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            <th class="align-middle text-center" style="width: 15%">ТВО №</th>
+            <th class="align-middle text-center" style="width: 15%">Кількість виборчих дільниць в окрузі</th>
+            <th class="align-middle text-center" style="width: 15%">Кількість виборчих дільниць щодо яких надійшли відомості</th>
+            <th class="align-middle text-center">Центр ТВО</th>
+        </tr> 
+    </thead>
+    <tbody class="">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-center" style="font-size: 1.2em" colspan="4"><b>@item.RegionName - @item.Count</b></td>
+            </tr>
+            foreach(var okrug in @item.okrugs)
+            {
+                <tr>
+                    <th class="text-center" style="width: 10%">@okrug.Id</th>
+                    <td class="text-center" style="width: 10%"><a class="text-info" href="/Home/OkrugPage/@okrug.Id">@okrug.Total</a></td>
+                    <td class="text-center bg-light" style="width: 10%">@okrug.Processed</td>
+                    <td class="text-left" >@okrug.Description</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+
+
